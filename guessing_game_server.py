@@ -7,9 +7,9 @@ s.listen(1)
 print("Waiting for connection...", address)
 client, addr = s.accept()
 print("Connection Established:", addr)
-number = random.randint(1, 100)
-print("Number to guess:", number)
 while True:
+    number = random.randint(1, 100)
+    print("Number to guess:", number)
     data = client.recv(1024).decode()
     if not data:
         break
